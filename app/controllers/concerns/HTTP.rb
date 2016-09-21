@@ -2,7 +2,13 @@ require 'net/http'
 require 'json'
 
 module HTTP
-	def getMembershipID(membershipType, displayName)
+
+	  # searchDestinyPlayer returns Hash of:
+  	# 	iconPath (Xbox or Playstation Logo)
+  	# 	membershipType (Xbox:1 or Playstation:2)
+  	# 	membershipId (Destiny membershipID)
+  	# 	displayName (gamertag with proper formatting)
+	def searchDestinyPlayer(membershipType, displayName)
 		# Break up to be only hostname & then list paths as
   	uri = URI("https://www.bungie.net/Platform/Destiny/SearchDestinyPlayer/#{membershipType}/#{displayName}/")
   	
@@ -12,8 +18,8 @@ module HTTP
 
   		response = http.request(req)
   		# Handle Error (301 Redirect / 404 Page Not Found)
-  		body = JSON.parse(response.body)
-  		return membershipId = body['Response'].first['membershipId']
+  		body = JSON.parse(response.body).with_indifferent_access
+  		return membershipId = body[:Response].first
   	end
 	end
 

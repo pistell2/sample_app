@@ -5,7 +5,7 @@ class StaticPagesController < ApplicationController
   	membershipType = System::XBOX
   	displayName = 'gmkryptonian'
   	byebug
-  	puts HTTP.getMembershipID(membershipType, displayName)
+  	puts HTTP.searchDestinyPlayer(membershipType, displayName)
   end
 
   def help
