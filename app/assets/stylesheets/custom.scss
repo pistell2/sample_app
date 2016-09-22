@@ -1,10 +1,18 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.main-image {
+  text-align: center;
+  overflow: auto;
+}
+
 /* universal */
 
 body {
-  padding-top: 100px;
+  padding-top: 60px;
+  /* Source: http://hdwallpaperbackgrounds.net/wp-content/uploads/2015/11/Destiny-Space-Desktop-Wallpapers-1920x1080.jpg */
+  background-image: url("destiny.png");
+  background-size: cover;
 }
 
 section {
@@ -66,4 +74,47 @@ p {
 #logo:hover {
   color: #fff;
   text-decoration: none;
+}
+
+/* body */
+.jumbotron {
+  opacity: 0.80
+}
+
+.btn {
+  width: 25%;
+}
+
+/* footer */
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  width: 90%;
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+}
+
+footer a {
+  color: #555;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 15px;
 }
