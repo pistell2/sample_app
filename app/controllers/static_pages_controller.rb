@@ -4,7 +4,6 @@ class StaticPagesController < ApplicationController
   def home
   	membershipType = System::XBOX
   	displayName = 'gmkryptonian'
-  	byebug
   	puts HTTP.searchDestinyPlayer(membershipType, displayName)
   end
 
