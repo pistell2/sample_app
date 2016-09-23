@@ -97,9 +97,6 @@ p {
 
 /* Note: Nesting is availabile here b/c of sassy css - scss */
 footer {
-  position: fixed;
-  bottom: 0px;
-  width: 90%;
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid $gray-medium-light;
