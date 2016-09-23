@@ -11,7 +11,7 @@
   </div>
 </header>
 
-<nav class="navbar navbar-fixed-top navbar-inverse visible-xs">
+<header class="navbar navbar-fixed-top navbar-inverse visible-xs">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -23,11 +23,10 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Dashboard</a></li>
-        <li><%= link_to "Home",   root_path %></li>
-        <li><%= link_to "Help",   help_path %></li>
-        <li><%= link_to "Log in", '#' %></li>
+        <li class="active"><%= link_to "Home",   root_path %></li>
+        <li>               <%= link_to "Help",   help_path %></li>
+        <li>               <%= link_to "Log in", '#' %></li>
       </ul>
     </div>
   </div>
-</nav>
+</header>
